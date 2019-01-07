@@ -1,4 +1,6 @@
-<div>
+{% extends 'base.html' %}
+
+{% block content %}
     {% for pet in pets %}
         <div class="petname">
             <a href="{% url 'pet_detail' pet.id %}">
@@ -12,4 +14,4 @@
             <p class="hidden">Description: {{pet.description}}</p>
         </div>
     {% endfor%}
-</div>
+{% endblock %}
