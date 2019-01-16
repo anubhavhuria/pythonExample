@@ -19,6 +19,7 @@ from django.urls import path
 from adoption import views
 
 urlpatterns = [
+    path('adoption', views.home, name="home"),
     path('admin/', admin.site.urls),
     path('',views.home,name="home"),
     path('adoption/<int:id>',views.pet_detail,name="pet_detail"),
